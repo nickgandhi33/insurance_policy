@@ -8,7 +8,16 @@ app_icon = "octicon octicon-file-directory"
 app_color = "grey"
 app_email = "gandhhi.nikhil3@gmail.com"
 app_license = "MIT"
-fixtures= ["Custom Field"]
+fixtures= [
+    {"dt": "Custom Field",
+    "filters": [
+        [
+            "dt", "in", ["Sales Order",
+            "Sales Invoice"],
+        ],
+        ["fieldname", "like", "insurance%"]
+    ]}
+]
 
 # Includes in <head>
 # ------------------
